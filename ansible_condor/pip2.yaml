@@ -1,0 +1,18 @@
+---
+- name: pip2
+  hosts: condortodo
+  tasks:
+    - name: cp file pip2
+      copy:
+        src: data/get-pip.py
+        dest: /root/get-pip.py
+    - name: install pip2
+      command: python2 /root/get-pip.py
+    - name: clear pip
+      command: mv /usr/local/bin/pip /usr/local/bin/pip27
+    - name: cp requirements
+      copy:
+        src: template/requirements.txt
+        dest: /root/requirements.txt
+    - name: pip2 install requirements
+      command: pip2 install -r requirements.txt
