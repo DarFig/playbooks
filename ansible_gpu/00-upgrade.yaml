@@ -1,0 +1,29 @@
+---
+- name: upgrade
+  hosts: hostbase
+  tasks:
+    - name: configure repositories
+      template:
+         src: "templates/sources.list"
+         dest: "/etc/apt/sources.list"
+         owner: root
+         group: root
+         mode: 644
+    - name: configure enterprise repositories
+      template:
+         src: "templates/pve-enterprise.list"
+         dest: "/etc/apt/sources.list.d/pve-enterprise.list"
+         owner: root
+         group: root
+         mode: 644
+    - name: Update apt-get repo and cache
+      apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+    - name: Upgrade all apt packages
+      apt: upgrade=dist force_apt_get=yes
+    - name: install packages
+      apt:
+        state: present
+        name: 
+                 - pve-headers
+    - name: Unconditionally reboot the machine with all defaults
+      reboot:

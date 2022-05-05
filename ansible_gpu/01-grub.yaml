@@ -1,0 +1,13 @@
+---
+- name: grub
+  hosts: hostbase
+  tasks:
+    - name: configure grub
+      template:
+         src: "templates/grub"
+         dest: "/etc/default/grub"
+         owner: root
+         group: root
+         mode: 644
+    - name: update grub
+      command: update-grub2

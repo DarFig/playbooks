@@ -1,0 +1,6 @@
+---
+- name: verify
+  hosts: hostbase
+  tasks:
+    - name: verify nvidia
+      command: nvidia-smi
