@@ -1,0 +1,18 @@
+---
+- name: r
+  hosts: condortodo
+  tasks:
+    - name: add apt key
+      ansible.builtin.apt_key:
+        keyserver: keyserver.ubuntu.com
+        id: E298A3A825C0D65DFD57CBB651716619E084DAB9
+    - name: add apt repository
+      ansible.builtin.apt_repository:
+        repo: deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/
+        state: present
+    - name: Update apt-get repo and cache
+      apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+    - name: install r-base-dev
+      apt:
+        name: r-base-dev
+        state: present
