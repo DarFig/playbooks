@@ -1,0 +1,44 @@
+---
+- name: software_base
+  hosts: condortodo
+  tasks:
+    - name: ensure vim
+      apt:
+        name: vim
+        state: present
+    - name: ensure git
+      apt:
+        name: git
+        state: present
+    - name: ensure libsndfile1
+      apt:
+        name: libsndfile1
+        state: present
+    - name: ensure openmpi
+      apt:
+        name: 
+          - libopenmpi-dev
+          - mpich
+          - openmpi-bin
+          - glibc-source
+        state: present
+    - name: ensure python2.7dev
+      apt:
+        name: python2.7-dev
+        state: present
+    - name: ensure virtualenv
+      apt:
+        name: virtualenv
+        state: present
+    - name: ensure sox para reproducir audio
+      apt:
+        name: sox
+        state: present
+    - name: ensure libsox-fmt-all ampliar formatos
+      apt:
+        name: libsox-fmt-all
+        state: present
+    - name: ensure ffmpeg
+      apt:
+        name: ffmpeg
+        state: present
