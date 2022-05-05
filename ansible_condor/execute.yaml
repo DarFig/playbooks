@@ -1,0 +1,16 @@
+---
+- name: Execute
+  hosts: condorexec
+  tasks:
+    - name: ensure libopenmpi-dev
+      apt:
+        name: libopenmpi-dev
+        state: present
+    - name: ensure mpich
+      apt:
+        name: mpich
+        state: present
+    - name: ensure openMP
+      apt:
+        name: libomp-dev
+        state: present
