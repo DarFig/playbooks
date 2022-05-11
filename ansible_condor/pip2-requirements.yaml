@@ -1,0 +1,14 @@
+---
+- name: pip2-requierement
+  hosts: condortodo
+  tasks:
+    - name: cp requirements
+      copy:
+        src: template/requirements.txt
+        dest: /root/requirements.txt
+    - name: pip2 install requirements
+      command: pip2 install -r requirements.txt
+    - name: install dvipng
+      apt:
+        name: dvipng
+        state: present
