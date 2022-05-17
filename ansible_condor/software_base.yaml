@@ -42,3 +42,7 @@
       apt:
         name: ffmpeg
         state: present
+    - name: ensure latex
+      apt:
+        name: texlive-latex-base
+        state: present
