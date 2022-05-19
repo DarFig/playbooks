@@ -1,8 +1,0 @@
----
-- name: dependencias_comsol
-  hosts: condorexec
-  tasks:
-    - name: ensure libswt
-      apt:
-        name: libswt-gtk-4-jni
-        state: present

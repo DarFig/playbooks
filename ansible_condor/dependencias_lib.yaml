@@ -1,0 +1,14 @@
+---
+- name: dependencias_lib
+  hosts: condorexec
+  tasks:
+    - name: ensure libswt comsol
+      apt:
+        name: libswt-gtk-4-jni
+        state: present
+    - name: ensure locale en_US vivado
+      commnad: locale-gen en_US.UTF-8
+    - name: ensure libtinfo5 vivado
+      apt:
+        name: libtinfo5
+        state: present
