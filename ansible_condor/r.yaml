@@ -16,3 +16,9 @@
       apt:
         name: r-base-dev
         state: present
+    - name: install dependencies
+      apt:
+        name:
+          - librsvg2-dev
+          - libwebp-dev
+          - libmagick++-dev
