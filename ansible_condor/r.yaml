@@ -16,9 +16,19 @@
       apt:
         name: r-base-dev
         state: present
-    - name: install dependencies
+    - name: lib dev
       apt:
         name:
           - librsvg2-dev
           - libwebp-dev
           - libmagick++-dev
+          - libcurl4-openssl-dev
+          - libssl-dev
+          - libxml2-dev
+        state: present
+    - name: copy r_libs
+      copy:
+        src: template/r_libs.r
+        dest: /root/r_libs.r
+    - name: install.lib
+      command: R CMD BATCH /root/r_libs.r

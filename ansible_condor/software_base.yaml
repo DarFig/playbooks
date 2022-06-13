@@ -2,6 +2,10 @@
 - name: software_base
   hosts: condortodo
   tasks:
+    - name: ensure htop
+      apt:
+        name: htop
+        state: present
     - name: ensure vim
       apt:
         name: vim
