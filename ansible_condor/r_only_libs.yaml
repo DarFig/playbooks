@@ -1,0 +1,10 @@
+---
+- name: r_only_libs
+  hosts: condortodo
+  tasks:
+    - name: copy r_libs
+      copy:
+        src: template/r_libs.r
+        dest: /root/r_libs.r
+    - name: install.lib
+      command: R CMD BATCH /root/r_libs.r
