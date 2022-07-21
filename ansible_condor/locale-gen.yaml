@@ -1,0 +1,6 @@
+---
+- name: locale-gen
+  hosts: nv3090
+  tasks:
+    - name: locale-gen
+      command: locale-gen es_ES.utf8
