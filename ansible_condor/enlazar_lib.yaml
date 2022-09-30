@@ -3,4 +3,6 @@
   hosts: condorexec
   tasks:
     - name: enlazar libc
+      command: ln -s /usr/lib/x86_64-linux-gnu /usr/lib64
+    - name: enlazar libc
       command: ln -s /lib/x86_64-linux-gnu/libc.so.6 /lib64/libc.so.6
