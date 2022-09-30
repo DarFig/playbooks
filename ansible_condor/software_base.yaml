@@ -50,3 +50,7 @@
       apt:
         name: texlive-latex-base
         state: present
+    - name: ensure gcc-multilib
+      apt:
+        name: gcc-multilib
+        state: present
