@@ -1,0 +1,8 @@
+---
+- name: software_secundario
+  hosts: condortodo
+  tasks:
+    - name: ensure python-tk
+      apt:
+        name: python-tk
+        state: present
