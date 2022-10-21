@@ -6,6 +6,7 @@
       copy:
         src: scripts/openfoamrepo.sh
         dest: /root/openfoamrepo.sh
+        mode: '0700'
     - name: install repo
       command: ./openfoamrepo.sh
     - name: clear
