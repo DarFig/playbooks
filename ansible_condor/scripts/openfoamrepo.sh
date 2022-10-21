@@ -40,4 +40,4 @@ then
 fi
 
 curl -L "${pubkey_url}" 2>/dev/null | gpg --dearmor > "$apt_pubkey_path"
-
+apt-get update -y >/dev/null 2>/dev/null
