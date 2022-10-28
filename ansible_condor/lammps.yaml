@@ -8,3 +8,7 @@
       apt:
         name: lammps
         state: present
+    - name: install liblammps-dev
+      apt:
+        name: liblammps-dev
+        state: present
