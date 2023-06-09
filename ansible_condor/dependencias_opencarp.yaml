@@ -1,0 +1,8 @@
+---
+- name: dependencias_opencarp
+  hosts: condorexec
+  tasks:
+    - name: ensure libfftw3-dev
+      apt:
+        name: libfftw3-dev
+        state: present
