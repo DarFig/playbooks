@@ -6,3 +6,15 @@
       apt:
         name: libfftw3-dev
         state: present
+    - name: ensure gengetopt
+      apt:
+        name: gengetopt
+        state: present
+    - name: ensure valgrind
+      apt:
+        name: valgrind
+        state: present
+    - name: ensure valgrind-mpi
+      apt:
+        name: valgrind-mpi
+        state: present
