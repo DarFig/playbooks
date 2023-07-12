@@ -18,3 +18,7 @@
       apt:
         name: valgrind-mpi
         state: present
+    - name: ensure zlib1g-dev
+      apt:
+        name: zlib1g-dev
+        state: present
