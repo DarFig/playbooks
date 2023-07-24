@@ -11,7 +11,3 @@
       command: ./openfoamrepo.sh
     - name: clear
       command: rm -f openfoamrepo.sh
-    - name: install openfoam
-      apt:
-        name: openfoam2206-default
-        state: present
