@@ -6,3 +6,7 @@
       apt:
         name: python-tk
         state: present
+    - name: install gnuplot
+      apt:
+        name: gnuplot
+        state: present    
