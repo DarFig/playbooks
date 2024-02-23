@@ -1,0 +1,6 @@
+---
+- name: Copiar condor_config a /etc/condor/
+  copy:
+    src: files/config/condor_config
+    dest: /etc/condor/condor_config
+    mode: '0644'

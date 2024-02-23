@@ -1,0 +1,18 @@
+---
+- name: Copiar scratch.sh a /etc/scripts/
+  copy:
+    src: files/config/scratch.sh
+    dest: /etc/scripts/scratch.sh
+    mode: '0744'
+
+- name: Copiar rc.local a /etc/
+  copy:
+    src: files/config/rc.local
+    dest: /etc/rc.local
+    mode: '0755'
+
+- name: Habilitar rc-local
+  systemd:
+    name: rc-local
+    enabled: yes
+    state: started

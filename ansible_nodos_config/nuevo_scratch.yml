@@ -1,0 +1,9 @@
+---
+- name: Configurar nodos
+  hosts: todos
+
+  roles:
+    - habilitar_scratch
+    - actualizar_execute
+    - actualizar_condor_common
+
