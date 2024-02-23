@@ -16,3 +16,8 @@
     name: rc-local
     enabled: yes
     state: started
+
+- name: Ejecutar scratch
+  command: ./scratch.sh
+  args:
+    chdir: "/etc/scripts"
