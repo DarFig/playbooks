@@ -1,7 +1,7 @@
 ---
 - name: Copiar common a /etc/condor/config.d/
   copy:
-    src: "files/config/{{ 'gpu' if 'gpu' in group_names else 'cpu' }}/common"
+    src: "files/config/{{ 'gpus' if 'gpu' in group_names else 'cpus' }}/common"
     dest: "/etc/condor/config.d/common"
     mode: '0600'
 - name: Ejecutar condor_reconfig
