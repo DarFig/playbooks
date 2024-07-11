@@ -1,0 +1,8 @@
+---
+- name: software_base2
+  hosts: condortodo
+  tasks:
+    - name: ensure neovim
+      apt:
+        name: neovim
+        state: present
