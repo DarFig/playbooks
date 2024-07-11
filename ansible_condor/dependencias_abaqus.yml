@@ -1,0 +1,8 @@
+---
+- name: dependencias_electra
+  hosts: condorexec
+  tasks:
+    - name: Instalar libjpeg62
+      apt:
+        name: libjpeg62
+        state: present
