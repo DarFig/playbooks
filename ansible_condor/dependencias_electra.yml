@@ -1,0 +1,87 @@
+---
+- name: dependencias_electra
+  hosts: her09
+  tasks:
+    - name: Instalar libgmp-dev
+      apt:
+        name: libgmp-dev
+        state: present
+
+    - name: Instalar libncurses5
+      apt:
+        name: libncurses5
+        state: present
+
+    - name: Instalar libmpfr-dev
+      apt:
+        name: libmpfr-dev
+        state: present
+
+    - name: Instalar libboost-system-dev
+      apt:
+        name: libboost-system-dev
+        state: present
+
+    - name: Instalar libboost-filesystem-dev
+      apt:
+        name: libboost-filesystem-dev
+        state: present
+
+    - name: Instalar libboost-iostreams-dev
+      apt:
+        name: libboost-iostreams-dev
+        state: present
+
+    - name: Instalar libboost-thread-dev
+      apt:
+        name: libboost-thread-dev
+        state: present
+
+    - name: Instalar libboost-program-options-dev
+      apt:
+        name: libboost-program-options-dev
+        state: present
+
+    - name: Instalar libopenblas-base
+      apt:
+        name: libopenblas-base
+        state: present
+
+    - name: Instalar libopenblas-dev
+      apt:
+        name: libopenblas-dev
+        state: present
+
+    - name: Instalar liblapack-dev
+      apt:
+        name: liblapack-dev
+        state: present
+
+    - name: Instalar libatlas-base-dev
+      apt:
+        name: libatlas-base-dev
+        state: present
+
+    - name: Instalar libsuitesparse-dev
+      apt:
+        name: libsuitesparse-dev
+        state: present
+
+    - name: Instalar libsuperlu-dev
+      apt:
+        name: libsuperlu-dev
+        state: present
+    - name: Instalar libssl-dev
+      apt:
+        name: libssl-dev
+        state: present
+
+    - name: Instalar libncurses5-dev
+      apt:
+        name: libncurses5-dev
+        state: present
+
+    - name: Instalar libgmp-dev
+      apt:
+        name: libomp-dev
+        state: present
