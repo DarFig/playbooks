@@ -1,9 +1,8 @@
 ---
 - name: Instalar OpenFOAM 8 en Ubuntu 20.04
-  hosts: localhost
-  become: yes
+  hosts: condorexec
   tasks:
-    - name: Añadir el repositorio oficial de OpenFOAM 8
+    - name: Añadir repositorio oficial de OpenFOAM 8
       apt_repository:
         repo: "deb http://dl.openfoam.org/ubuntu focal main"
         state: present
