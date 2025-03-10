@@ -1,0 +1,23 @@
+---
+- name: Instalar OpenFOAM 8 en Ubuntu 20.04
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Añadir el repositorio oficial de OpenFOAM 8
+      apt_repository:
+        repo: "deb http://dl.openfoam.org/ubuntu focal main"
+        state: present
+
+    - name: Añadir la clave del repositorio
+      apt_key:
+        url: "http://dl.openfoam.org/gpg.key"
+        state: present
+
+    - name: Actualizar la lista de paquetes
+      apt:
+        update_cache: yes
+
+    - name: Instalar OpenFOAM 8
+      apt:
+        name: openfoam8
+        state: present
