@@ -1,5 +1,5 @@
 ---
-- name: dependencias_electra
+- name: dependencias_eda2
   hosts: xwin-eda
   tasks:
     - name: Instalar numactl-libs
