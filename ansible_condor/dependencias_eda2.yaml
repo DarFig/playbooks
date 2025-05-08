@@ -1,0 +1,8 @@
+---
+- name: dependencias_electra
+  hosts: xwin-eda
+  tasks:
+    - name: Instalar numactl-libs
+      dnf:
+        name: numactl-libs
+        state: present
