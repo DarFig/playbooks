@@ -19,3 +19,11 @@
       apt:
         name: openfoam8
         state: present
+    - name: Instalar OpenFOAM 11
+      apt:
+        name: openfoam11
+        state: present
+    - name: Instalar OpenFOAM 12
+      apt:
+        name: openfoam12
+        state: present
